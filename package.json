@@ -1,0 +1,12 @@
+{
+  "name": "template-lawyer-accountant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TechSites Master Template — Lawyer & Accountant niche.",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

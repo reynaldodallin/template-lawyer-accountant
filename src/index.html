@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="{{site.language}}" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="{{brand.primary_color}}" />
+  <title>{{site.name}} — {{site.tagline}}</title>
+  <meta name="description" content="{{site.description}}" />
+  <link rel="canonical" href="{{site.url}}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: "{{brand.primary_color}}", accent: "{{brand.accent_color}}", ink: "{{brand.neutral_color}}" }
+          },
+          fontFamily: { sans: ["Inter", "system-ui"], serif: ["Playfair Display", "Georgia"] }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="bg-white text-slate-900 antialiased font-sans">
+
+<!-- ================= NAV ================= -->
+<header class="sticky top-0 z-40 bg-white/85 backdrop-blur border-b border-slate-200">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between" aria-label="Primary navigation">
+    <a href="#top" class="flex items-center gap-3" aria-label="Homepage">
+      <span class="inline-flex h-9 w-9 rounded-md bg-brand text-white items-center justify-center font-serif text-lg" aria-hidden="true">S</span>
+      <span class="leading-tight">
+        <span class="block font-serif font-semibold text-brand-ink text-lg">{{brand.logo_text}}</span>
+        <span class="block text-[11px] uppercase tracking-[0.18em] text-slate-500" data-editable="nav_logo_subtitle">{{brand.logo_subtitle}}</span>
+      </span>
+    </a>
+    <ul class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-700">
+      <li><a href="#services" data-editable="nav_link_services">{{nav.services_label}}</a></li>
+      <li><a href="#about" data-editable="nav_link_about">{{nav.about_label}}</a></li>
+      <li><a href="#team" data-editable="nav_link_team">{{nav.team_label}}</a></li>
+      <li><a href="#testimonials" data-editable="nav_link_testimonials">{{nav.testimonials_label}}</a></li>
+      <li><a href="#faq" data-editable="nav_link_faq">FAQ</a></li>
+    </ul>
+    <div class="flex items-center gap-3">
+      <a href="tel:{{contact.phone_href}}" class="hidden md:inline text-sm font-medium text-slate-600" data-editable="nav_phone_label">{{contact.phone_label}}</a>
+      <a href="#consultation" class="inline-flex items-center rounded-md bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-ink transition" data-editable="nav_cta_label">{{nav.cta_label}}</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="relative overflow-hidden border-b border-slate-200">
+  <div class="absolute inset-0 -z-10 bg-gradient-to-br from-slate-50 via-white to-amber-50/40"></div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/70 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-slate-600" data-editable="hero_eyebrow">{{hero.eyebrow}}</p>
+      <h1 class="mt-6 font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-brand-ink">{{hero.title}}</h1>
+      <p class="mt-6 text-lg text-slate-600 max-w-xl">{{hero.subtitle}}</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="{{hero.primary_cta_href}}" class="inline-flex items-center rounded-md bg-brand px-6 py-3 text-sm font-semibold text-white hover:bg-brand-ink transition">{{hero.primary_cta_label}}</a>
+        <a href="{{hero.secondary_cta_href}}" class="inline-flex items-center rounded-md border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 hover:border-brand transition">{{hero.secondary_cta_label}}</a>
+      </div>
+      <p class="mt-6 text-sm text-slate-500">{{hero.trust_label}}</p>
+      <dl class="mt-8 grid grid-cols-3 gap-6 max-w-md">
+        <div>
+          <dt class="text-xs uppercase tracking-wider text-slate-500" data-editable="hero_stat_one_label">{{hero.stat_one_label}}</dt>
+          <dd class="mt-1 text-2xl font-serif font-semibold text-brand">{{hero.stat_one_value}}</dd>
+        </div>
+        <div>
+          <dt class="text-xs uppercase tracking-wider text-slate-500" data-editable="hero_stat_two_label">{{hero.stat_two_label}}</dt>
+          <dd class="mt-1 text-2xl font-serif font-semibold text-brand">{{hero.stat_two_value}}</dd>
+        </div>
+        <div>
+          <dt class="text-xs uppercase tracking-wider text-slate-500" data-editable="hero_stat_three_label">{{hero.stat_three_label}}</dt>
+          <dd class="mt-1 text-2xl font-serif font-semibold text-brand">{{hero.stat_three_value}}</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="relative">
+      <img src="{{hero.image_url}}" alt="{{hero.image_alt}}" class="w-full h-[480px] object-cover rounded-xl shadow-xl" />
+      <div class="absolute -bottom-6 -left-6 hidden md:block bg-white border border-slate-200 rounded-lg shadow-lg p-4 w-64">
+        <p class="text-xs uppercase tracking-wider text-slate-500" data-editable="hero_card_label">Clio · Verified review</p>
+        <p class="mt-2 text-sm text-slate-700" data-editable="hero_card_quote">"They closed our Series A in 19 days. Calm, fast, surgical."</p>
+        <p class="mt-2 text-xs font-semibold text-brand" data-editable="hero_card_author">— Founder, healthtech startup</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOGOS / TRUST BAR ================= -->
+<section class="border-b border-slate-200 bg-slate-50/60">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+    <p class="text-center text-xs uppercase tracking-[0.2em] text-slate-500" data-editable="trustbar_caption">Selected clients & affiliations</p>
+    <ul class="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm font-semibold text-slate-400">
+      <li data-editable="trustbar_logo_one">American Bar Association</li>
+      <li data-editable="trustbar_logo_two">AICPA</li>
+      <li data-editable="trustbar_logo_three">Texas State Bar</li>
+      <li data-editable="trustbar_logo_four">Delaware Bar</li>
+      <li data-editable="trustbar_logo_five">NACVA</li>
+      <li data-editable="trustbar_logo_six">Clio Certified</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-3xl">
+      <p class="text-xs uppercase tracking-[0.18em] text-brand" data-editable="services_eyebrow">{{services_section.eyebrow}}</p>
+      <h2 class="mt-3 font-serif text-3xl md:text-4xl font-semibold text-brand-ink">{{services_section.title}}</h2>
+      <p class="mt-4 text-lg text-slate-600">{{services_section.subtitle}}</p>
+    </div>
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- repeat:services src/feature-card.html -->
+    </div>
+    <p class="mt-10 text-sm text-slate-500" data-editable="services_footnote">All practice areas are staffed by partners with 12+ years of senior-side experience.</p>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-20 lg:py-28 bg-slate-50/60 border-y border-slate-200">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
+    <div class="order-2 lg:order-1">
+      <img src="{{about.image_url}}" alt="{{about.image_alt}}" class="w-full h-[460px] object-cover rounded-xl shadow-md" />
+    </div>
+    <div class="order-1 lg:order-2">
+      <p class="text-xs uppercase tracking-[0.18em] text-brand" data-editable="about_eyebrow">{{about.eyebrow}}</p>
+      <h2 class="mt-3 font-serif text-3xl md:text-4xl font-semibold text-brand-ink">{{about.title}}</h2>
+      <p class="mt-5 text-base text-slate-600">{{about.body_one}}</p>
+      <p class="mt-4 text-base text-slate-600">{{about.body_two}}</p>
+      <ul class="mt-8 space-y-3 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="text-brand-accent" aria-hidden="true">✓</span><span>{{about.highlight_one}}</span></li>
+        <li class="flex gap-3"><span class="text-brand-accent" aria-hidden="true">✓</span><span>{{about.highlight_two}}</span></li>
+        <li class="flex gap-3"><span class="text-brand-accent" aria-hidden="true">✓</span><span>{{about.highlight_three}}</span></li>
+      </ul>
+      <a href="#consultation" class="mt-8 inline-flex items-center rounded-md border border-brand px-5 py-2.5 text-sm font-semibold text-brand hover:bg-brand hover:text-white transition" data-editable="about_cta_label">Book a partner-level call</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ITEMS / PRICING CARDS ================= -->
+<section id="packages" class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-3xl">
+      <p class="text-xs uppercase tracking-[0.18em] text-brand" data-editable="items_eyebrow">Flat-Fee Packages</p>
+      <h2 class="mt-3 font-serif text-3xl md:text-4xl font-semibold text-brand-ink" data-editable="items_title">Transparent engagements with published ceilings.</h2>
+      <p class="mt-4 text-lg text-slate-600" data-editable="items_subtitle">Pick a published bundle, or build a custom retainer in your free consultation. All packages include senior partner involvement.</p>
+    </div>
+    <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <!-- repeat:items src/item-card.html -->
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURES / WHY US ================= -->
+<section id="why" class="py-20 lg:py-28 bg-brand-ink text-slate-100">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-3xl">
+      <p class="text-xs uppercase tracking-[0.18em] text-brand-accent" data-editable="features_eyebrow">{{features_section.eyebrow}}</p>
+      <h2 class="mt-3 font-serif text-3xl md:text-4xl font-semibold text-white">{{features_section.title}}</h2>
+      <p class="mt-4 text-lg text-slate-300">{{features_section.subtitle}}</p>
+    </div>
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- repeat:features src/feature-card.html -->
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section id="team" class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-3xl">
+      <p class="text-xs uppercase tracking-[0.18em] text-brand" data-editable="team_eyebrow">{{team_section.eyebrow}}</p>
+      <h2 class="mt-3 font-serif text-3xl md:text-4xl font-semibold text-brand-ink">{{team_section.title}}</h2>
+      <p class="mt-4 text-lg text-slate-600">{{team_section.subtitle}}</p>
+    </div>
+    <div class="mt-12 grid gap-8 md:grid-cols-3">
+      <article class="text-center">
+        <img src="{{team[0].image_url}}" alt="{{team[0].image_alt}}" class="mx-auto h-44 w-44 rounded-full object-cover ring-4 ring-brand-accent/20" />
+        <h3 class="mt-5 font-serif text-xl font-semibold text-brand-ink">{{team[0].name}}</h3>
+        <p class="mt-1 text-sm font-medium text-brand">{{team[0].role}}</p>
+        <p class="mt-1 text-xs uppercase tracking-wider text-slate-500">{{team[0].credentials}}</p>
+        <p class="mt-3 text-sm text-slate-600">{{team[0].bio}}</p>
+        <a href="mailto:{{contact.email}}" class="mt-3 inline-block text-xs font-semibold text-brand" data-editable="team_one_contact">Email Margaret</a>
+      </article>
+      <article class="text-center">
+        <img src="{{team[1].image_url}}" alt="{{team[1].image_alt}}" class="mx-auto h-44 w-44 rounded-full object-cover ring-4 ring-brand-accent/20" />
+        <h3 class="mt-5 font-serif text-xl font-semibold text-brand-ink">{{team[1].name}}</h3>
+        <p class="mt-1 text-sm font-medium text-brand">{{team[1].role}}</p>
+        <p class="mt-1 text-xs uppercase tracking-wider text-slate-500">{{team[1].credentials}}</p>
+        <p class="mt-3 text-sm text-slate-600">{{team[1].bio}}</p>
+        <a href="mailto:{{contact.email}}" class="mt-3 inline-block text-xs font-semibold text-brand" data-editable="team_two_contact">Email David</a>
+      </article>
+      <article class="text-center">
+        <img src="{{team[2].image_url}}" alt="{{team[2].image_alt}}" class="mx-auto h-44 w-44 rounded-full object-cover ring-4 ring-brand-accent/20" />
+        <h3 class="mt-5 font-serif text-xl font-semibold text-brand-ink">{{team[2].name}}</h3>
+        <p class="mt-1 text-sm font-medium text-brand">{{team[2].role}}</p>
+        <p class="mt-1 text-xs uppercase tracking-wider text-slate-500">{{team[2].credentials}}</p>
+        <p class="mt-3 text-sm text-slate-600">{{team[2].bio}}</p>
+        <a href="mailto:{{contact.email}}" class="mt-3 inline-block text-xs font-semibold text-brand" data-editable="team_three_contact">Email Priya</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section id="testimonials" class="py-20 lg:py-28 bg-slate-50/60 border-y border-slate-200">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-3xl">
+      <p class="text-xs uppercase tracking-[0.18em] text-brand" data-editable="testimonials_eyebrow">{{testimonials_section.eyebrow}}</p>
+      <h2 class="mt-3 font-serif text-3xl md:text-4xl font-semibold text-brand-ink">{{testimonials_section.title}}</h2>
+      <p class="mt-4 text-lg text-slate-600">{{testimonials_section.subtitle}}</p>
+    </div>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <figure class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+        <p class="text-amber-500 text-sm" aria-label="5 out of 5 stars" data-editable="testimonial_one_stars">★★★★★</p>
+        <blockquote class="mt-4 text-sm text-slate-700">{{testimonials[0].quote}}</blockquote>
+        <figcaption class="mt-5 flex items-center gap-3">
+          <img src="{{testimonials[0].image_url}}" alt="{{testimonials[0].image_alt}}" class="h-10 w-10 rounded-full object-cover" />
+          <span>
+            <span class="block text-sm font-semibold text-brand-ink">{{testimonials[0].name}}</span>
+            <span class="block text-xs text-slate-500">{{testimonials[0].role}}</span>
+          </span>
+        </figcaption>
+      </figure>
+      <figure class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+        <p class="text-amber-500 text-sm" aria-label="5 out of 5 stars" data-editable="testimonial_two_stars">★★★★★</p>
+        <blockquote class="mt-4 text-sm text-slate-700">{{testimonials[1].quote}}</blockquote>
+        <figcaption class="mt-5 flex items-center gap-3">
+          <img src="{{testimonials[1].image_url}}" alt="{{testimonials[1].image_alt}}" class="h-10 w-10 rounded-full object-cover" />
+          <span>
+            <span class="block text-sm font-semibold text-brand-ink">{{testimonials[1].name}}</span>
+            <span class="block text-xs text-slate-500">{{testimonials[1].role}}</span>
+          </span>
+        </figcaption>
+      </figure>
+      <figure class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+        <p class="text-amber-500 text-sm" aria-label="5 out of 5 stars" data-editable="testimonial_three_stars">★★★★★</p>
+        <blockquote class="mt-4 text-sm text-slate-700">{{testimonials[2].quote}}</blockquote>
+        <figcaption class="mt-5 flex items-center gap-3">
+          <img src="{{testimonials[2].image_url}}" alt="{{testimonials[2].image_alt}}" class="h-10 w-10 rounded-full object-cover" />
+          <span>
+            <span class="block text-sm font-semibold text-brand-ink">{{testimonials[2].name}}</span>
+            <span class="block text-xs text-slate-500">{{testimonials[2].role}}</span>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq" class="py-20 lg:py-28">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8">
+    <div>
+      <p class="text-xs uppercase tracking-[0.18em] text-brand" data-editable="faq_eyebrow">{{faq_section.eyebrow}}</p>
+      <h2 class="mt-3 font-serif text-3xl md:text-4xl font-semibold text-brand-ink">{{faq_section.title}}</h2>
+      <p class="mt-4 text-lg text-slate-600">{{faq_section.subtitle}}</p>
+    </div>
+    <div class="mt-10 divide-y divide-slate-200 border-y border-slate-200">
+      <details class="group py-6">
+        <summary class="cursor-pointer flex justify-between items-start gap-4">
+          <h3 class="font-serif text-lg font-semibold text-brand-ink">{{faq[0].question}}</h3>
+          <span class="text-brand transition group-open:rotate-45 text-2xl leading-none" aria-hidden="true">+</span>
+        </summary>
+        <p class="mt-3 text-base text-slate-600">{{faq[0].answer}}</p>
+      </details>
+      <details class="group py-6">
+        <summary class="cursor-pointer flex justify-between items-start gap-4">
+          <h3 class="font-serif text-lg font-semibold text-brand-ink">{{faq[1].question}}</h3>
+          <span class="text-brand transition group-open:rotate-45 text-2xl leading-none" aria-hidden="true">+</span>
+        </summary>
+        <p class="mt-3 text-base text-slate-600">{{faq[1].answer}}</p>
+      </details>
+      <details class="group py-6">
+        <summary class="cursor-pointer flex justify-between items-start gap-4">
+          <h3 class="font-serif text-lg font-semibold text-brand-ink">{{faq[2].question}}</h3>
+          <span class="text-brand transition group-open:rotate-45 text-2xl leading-none" aria-hidden="true">+</span>
+        </summary>
+        <p class="mt-3 text-base text-slate-600">{{faq[2].answer}}</p>
+      </details>
+      <details class="group py-6">
+        <summary class="cursor-pointer flex justify-between items-start gap-4">
+          <h3 class="font-serif text-lg font-semibold text-brand-ink">{{faq[3].question}}</h3>
+          <span class="text-brand transition group-open:rotate-45 text-2xl leading-none" aria-hidden="true">+</span>
+        </summary>
+        <p class="mt-3 text-base text-slate-600">{{faq[3].answer}}</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONSULTATION FORM ================= -->
+<section id="consultation" class="py-20 lg:py-28 bg-gradient-to-br from-brand to-brand-ink text-white">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-start">
+    <div>
+      <p class="text-xs uppercase tracking-[0.18em] text-brand-accent" data-editable="cta_eyebrow">{{cta_section.eyebrow}}</p>
+      <h2 class="mt-3 font-serif text-3xl md:text-4xl font-semibold">{{cta_section.title}}</h2>
+      <p class="mt-4 text-lg text-slate-200">{{cta_section.subtitle}}</p>
+      <ul class="mt-8 space-y-3 text-sm text-slate-200">
+        <li class="flex gap-3"><span class="text-brand-accent" aria-hidden="true">✓</span><span>{{cta_section.trust_one}}</span></li>
+        <li class="flex gap-3"><span class="text-brand-accent" aria-hidden="true">✓</span><span>{{cta_section.trust_two}}</span></li>
+        <li class="flex gap-3"><span class="text-brand-accent" aria-hidden="true">✓</span><span>{{cta_section.trust_three}}</span></li>
+      </ul>
+      <p class="mt-10 text-sm text-slate-300">
+        <span class="block uppercase tracking-wider text-xs text-slate-400" data-editable="cta_office_label">Office</span>
+        <span class="block">{{contact.address_line1}}</span>
+        <span class="block">{{contact.address_line2}}</span>
+      </p>
+      <p class="mt-4 text-sm text-slate-300">
+        <span class="block uppercase tracking-wider text-xs text-slate-400" data-editable="cta_hours_label">Hours</span>
+        <span class="block">{{contact.hours_weekdays}}</span>
+        <span class="block">{{contact.hours_saturday}}</span>
+        <span class="block">{{contact.hours_sunday}}</span>
+      </p>
+    </div>
+    <form class="bg-white text-slate-900 rounded-xl shadow-2xl p-6 md:p-8 space-y-5" novalidate>
+      <label class="block">
+        <span class="block text-sm font-semibold text-slate-700" data-editable="form_name_label">{{cta_section.form_name_label}}</span>
+        <input type="text" placeholder="{{cta_section.form_name_placeholder}}" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-brand focus:ring-brand sm:text-sm" required />
+      </label>
+      <label class="block">
+        <span class="block text-sm font-semibold text-slate-700" data-editable="form_email_label">{{cta_section.form_email_label}}</span>
+        <input type="email" placeholder="{{cta_section.form_email_placeholder}}" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-brand focus:ring-brand sm:text-sm" required />
+      </label>
+      <label class="block">
+        <span class="block text-sm font-semibold text-slate-700" data-editable="form_phone_label">{{cta_section.form_phone_label}}</span>
+        <input type="tel" placeholder="{{cta_section.form_phone_placeholder}}" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-brand focus:ring-brand sm:text-sm" />
+      </label>
+      <label class="block">
+        <span class="block text-sm font-semibold text-slate-700" data-editable="form_topic_label">{{cta_section.form_topic_label}}</span>
+        <textarea rows="4" placeholder="{{cta_section.form_topic_placeholder}}" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-brand focus:ring-brand sm:text-sm"></textarea>
+      </label>
+      <label class="flex items-start gap-3 text-xs text-slate-600">
+        <input type="checkbox" class="mt-1 rounded border-slate-300 text-brand focus:ring-brand" required />
+        <span data-editable="form_consent_text">{{cta_section.form_consent_label}}</span>
+      </label>
+      <button type="submit" class="w-full inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-ink transition" data-editable="form_submit_button">{{cta_section.form_submit_label}}</button>
+      <p class="text-center text-xs text-slate-500" data-editable="form_privacy_note">We never share your information. SOC 2 Type II audited.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-brand-ink text-slate-300">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 grid gap-10 lg:grid-cols-4">
+    <div>
+      <p class="font-serif text-xl font-semibold text-white">{{brand.logo_text}}</p>
+      <p class="mt-3 text-sm text-slate-400">{{footer.tagline}}</p>
+      <p class="mt-6 text-xs uppercase tracking-[0.18em] text-slate-500" data-editable="footer_follow_label">Follow</p>
+      <ul class="mt-3 flex gap-4 text-sm">
+        <li><a href="#" class="hover:text-brand-accent" data-editable="footer_social_linkedin">{{footer.social_linkedin_label}}</a></li>
+        <li><a href="#" class="hover:text-brand-accent" data-editable="footer_social_x">{{footer.social_x_label}}</a></li>
+        <li><a href="#" class="hover:text-brand-accent" data-editable="footer_social_youtube">{{footer.social_youtube_label}}</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wider text-white" data-editable="footer_col_legal">{{footer.links_legal_label}}</p>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a href="#" class="hover:text-white" data-editable="footer_legal_privacy">Privacy policy</a></li>
+        <li><a href="#" class="hover:text-white" data-editable="footer_legal_terms">Terms of service</a></li>
+        <li><a href="#" class="hover:text-white" data-editable="footer_legal_disclaimer">Legal disclaimer</a></li>
+        <li><a href="#" class="hover:text-white" data-editable="footer_legal_accessibility">Accessibility</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wider text-white" data-editable="footer_col_resources">{{footer.links_resources_label}}</p>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a href="#" class="hover:text-white" data-editable="footer_resources_blog">Blog & insights</a></li>
+        <li><a href="#" class="hover:text-white" data-editable="footer_resources_guides">Tax guides</a></li>
+        <li><a href="#" class="hover:text-white" data-editable="footer_resources_calculators">Free calculators</a></li>
+        <li><a href="#" class="hover:text-white" data-editable="footer_resources_glossary">Glossary</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wider text-white" data-editable="footer_col_newsletter">{{footer.newsletter_label}}</p>
+      <form class="mt-4 flex flex-col sm:flex-row gap-2">
+        <input type="email" placeholder="{{footer.newsletter_placeholder}}" class="flex-1 rounded-md border-0 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-slate-400 focus:ring-2 focus:ring-brand-accent" />
+        <button type="submit" class="rounded-md bg-brand-accent px-4 py-2 text-sm font-semibold text-brand-ink hover:bg-amber-400 transition">{{footer.newsletter_button}}</button>
+      </form>
+      <p class="mt-4 text-xs text-slate-500" data-editable="footer_newsletter_note">One email per quarter. No spam, ever.</p>
+      <p class="mt-6 text-xs text-slate-500">{{footer.license}}</p>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+      <p><span data-editable="footer_copyright_prefix">©</span> {{site.year}} {{brand.logo_text}}. {{footer.rights}}</p>
+      <p>{{footer.disclaimer}}</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= TSW WYSIWYG ================= -->
+<script src="assets/js/techsites-wysiwyg.config.js"></script>
+<script src="assets/js/techsites-wysiwyg-standalone.js"></script>
+<script>
+  if (window.TSWStandalone && window.TSW_CONFIG) {
+    window.TSWStandalone.init(window.TSW_CONFIG);
+  }
+</script>
+
+</body>
+</html>

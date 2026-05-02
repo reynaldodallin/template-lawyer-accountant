@@ -1,0 +1,80 @@
+/* =========================================================
+   TechSites Master Template — Lawyer & Accountant
+   Style layer — CSS variables only. No hex hardcoded.
+   ========================================================= */
+
+:root {
+  --primary: {{brand.primary_color}};
+  --accent: {{brand.accent_color}};
+  --ink: {{brand.neutral_color}};
+  --bg: #ffffff;
+  --bg-soft: #f8fafc;
+  --text: #1e293b;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --font: {{brand.font_family}};
+  --font-serif: {{brand.font_serif}};
+  --radius: {{brand.border_radius}};
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 8px 24px -8px rgba(15, 23, 42, 0.18);
+}
+
+[data-theme="dark"] {
+  --bg: #0b1220;
+  --bg-soft: #111a2c;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border: #1e293b;
+  --primary: {{brand.accent_color}};
+  --ink: #f8fafc;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] header,
+[data-theme="dark"] footer { background: var(--bg-soft); border-color: var(--border); }
+
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-slate-50\/60 { background: var(--bg-soft) !important; color: var(--text); }
+
+[data-theme="dark"] .text-slate-700,
+[data-theme="dark"] .text-slate-600,
+[data-theme="dark"] .text-slate-500 { color: var(--text-muted) !important; }
+
+[data-theme="dark"] .border-slate-200 { border-color: var(--border) !important; }
+
+[data-theme="dark"] .text-brand-ink { color: var(--ink) !important; }
+
+a { color: inherit; }
+
+input, textarea, select {
+  font-family: inherit;
+  border-radius: var(--radius);
+}
+
+button, .btn {
+  border-radius: var(--radius);
+  font-family: inherit;
+}
+
+/* Reduced-motion friendly transitions */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+/* Print-friendly */
+@media print {
+  header, footer, .no-print { display: none !important; }
+  body { color: #000; background: #fff; }
+}

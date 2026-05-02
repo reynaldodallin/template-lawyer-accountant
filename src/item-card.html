@@ -1,0 +1,21 @@
+<article class="flex flex-col rounded-xl overflow-hidden border border-slate-200 bg-white shadow-sm transition hover:shadow-lg hover:-translate-y-0.5">
+  <div class="relative aspect-[4/3] overflow-hidden">
+    <img src="{{item.image_url}}" alt="{{item.image_alt}}" class="h-full w-full object-cover transition group-hover:scale-105" />
+    <span class="absolute top-3 left-3 inline-flex items-center rounded-full bg-brand-accent/95 px-3 py-1 text-[10px] uppercase tracking-wider text-brand-ink font-semibold">{{item.label}}</span>
+  </div>
+  <div class="flex flex-col flex-1 p-5">
+    <h3 class="font-serif text-lg font-semibold text-brand-ink">{{item.title}}</h3>
+    <p class="mt-2 text-sm text-slate-600 flex-1">{{item.summary}}</p>
+    <dl class="mt-4 grid grid-cols-2 gap-3 text-xs text-slate-500">
+      <div>
+        <dt class="uppercase tracking-wider text-[10px]">Investment</dt>
+        <dd class="mt-0.5 text-sm font-semibold text-brand">{{item.price}}</dd>
+      </div>
+      <div>
+        <dt class="uppercase tracking-wider text-[10px]">Timeline</dt>
+        <dd class="mt-0.5 text-sm font-semibold text-brand-ink">{{item.duration}}</dd>
+      </div>
+    </dl>
+    <a href="{{item.cta_href}}" class="mt-5 inline-flex items-center justify-center rounded-md border border-brand px-4 py-2 text-sm font-semibold text-brand hover:bg-brand hover:text-white transition">{{item.cta_label}}</a>
+  </div>
+</article>

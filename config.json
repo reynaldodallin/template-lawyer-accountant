@@ -1,0 +1,332 @@
+{
+  "schema": "techsites.master-template/v2.1",
+  "niche": {
+    "slug": "lawyer-accountant",
+    "name": "Lawyer & Accountant",
+    "vertical": "professional-services"
+  },
+  "site": {
+    "id": "lawyer-accountant-master",
+    "name": "Sterling & Hayes",
+    "tagline": "Trusted Legal & Accounting Counsel",
+    "description": "Boutique law and accounting firm helping founders, families, and growing businesses navigate complex legal and financial decisions with clarity.",
+    "url": "https://template-lawyer-accountant.pages.dev",
+    "language": "en",
+    "locale": "en-US",
+    "year": "2026"
+  },
+  "brand": {
+    "logo_text": "Sterling & Hayes",
+    "logo_subtitle": "Attorneys · CPAs",
+    "primary_color": "#1B3A57",
+    "accent_color": "#C8A24B",
+    "neutral_color": "#0F1B2A",
+    "font_family": "Inter, system-ui, sans-serif",
+    "font_serif": "Playfair Display, Georgia, serif",
+    "border_radius": "10px"
+  },
+  "contact": {
+    "phone_label": "(512) 555-0148",
+    "phone_href": "+15125550148",
+    "email": "advisory@sterlinghayes.example",
+    "address_line1": "412 Congress Avenue, Suite 1900",
+    "address_line2": "Austin, TX 78701",
+    "hours_weekdays": "Monday – Friday · 8:30 AM – 6:00 PM",
+    "hours_saturday": "Saturday · By appointment",
+    "hours_sunday": "Sunday · Closed"
+  },
+  "nav": {
+    "home_label": "Home",
+    "services_label": "Services",
+    "about_label": "About",
+    "team_label": "Team",
+    "testimonials_label": "Clients",
+    "contact_label": "Consultation",
+    "cta_label": "Book Consultation"
+  },
+  "hero": {
+    "eyebrow": "Boutique Advisory · Texas, USA",
+    "title": "Legal Strategy and Accounting Discipline, Under One Roof",
+    "subtitle": "Twenty-six years guiding founders, family offices, and operating companies through formation, tax planning, contracts, and audit defense — without the big-firm overhead.",
+    "primary_cta_label": "Schedule a Free Consultation",
+    "primary_cta_href": "#consultation",
+    "secondary_cta_label": "See Our Practice Areas",
+    "secondary_cta_href": "#services",
+    "image_url": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80",
+    "image_alt": "Two professionals reviewing a legal document at a conference table",
+    "trust_label": "Trusted by 480+ businesses across Texas",
+    "stat_one_value": "26",
+    "stat_one_label": "Years in practice",
+    "stat_two_value": "480+",
+    "stat_two_label": "Clients served",
+    "stat_three_value": "$1.2B",
+    "stat_three_label": "Transactions advised"
+  },
+  "about": {
+    "eyebrow": "Who We Are",
+    "title": "A dual-discipline firm built for clear-headed decisions.",
+    "body_one": "Sterling & Hayes pairs licensed attorneys with credentialed CPAs so every contract, election, and entity choice is evaluated through both a legal and tax lens before you sign. No silos, no second invoices, no surprises.",
+    "body_two": "We work with operators who want senior judgment without paying for partner-track billable bloat. Most engagements are flat-fee or capped, and we publish our hourly ceilings up front.",
+    "highlight_one": "Licensed in Texas, Delaware, and New York",
+    "highlight_two": "AICPA-member CPAs on staff",
+    "highlight_three": "Flat-fee and capped engagements",
+    "image_url": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80",
+    "image_alt": "Modern law office library with shelves of legal volumes"
+  },
+  "services_section": {
+    "eyebrow": "Practice Areas",
+    "title": "One firm. Both disciplines. End-to-end coverage.",
+    "subtitle": "From the first operating agreement to your eventual exit, our integrated bench keeps legal exposure and tax outcomes aligned at every milestone."
+  },
+  "services": [
+    {
+      "icon": "scale",
+      "title": "Business Formation & Governance",
+      "summary": "LLC, S-corp, and C-corp formation with operating agreements, cap tables, and bylaws drafted to anticipate your next funding round.",
+      "link_label": "Learn more",
+      "link_href": "#consultation"
+    },
+    {
+      "icon": "document",
+      "title": "Contracts & Commercial Agreements",
+      "summary": "Master service agreements, vendor contracts, NDAs, and licensing — negotiated by attorneys, stress-tested for tax impact by CPAs.",
+      "link_label": "Learn more",
+      "link_href": "#consultation"
+    },
+    {
+      "icon": "calculator",
+      "title": "Tax Planning & Preparation",
+      "summary": "Federal, state, and multi-state filings for individuals, partnerships, and corporations with proactive year-round optimization.",
+      "link_label": "Learn more",
+      "link_href": "#consultation"
+    },
+    {
+      "icon": "shield",
+      "title": "IRS & Audit Defense",
+      "summary": "End-to-end representation before the IRS, state revenue boards, and the Texas Comptroller — including offers in compromise.",
+      "link_label": "Learn more",
+      "link_href": "#consultation"
+    },
+    {
+      "icon": "chart",
+      "title": "Bookkeeping & CFO Advisory",
+      "summary": "Monthly close, financial reporting, and fractional CFO services calibrated to operators running between $1M and $50M in revenue.",
+      "link_label": "Learn more",
+      "link_href": "#consultation"
+    },
+    {
+      "icon": "house",
+      "title": "Estate, Trust & Succession",
+      "summary": "Wills, revocable trusts, dynasty trusts, and family-business succession plans coordinated with your tax and asset structure.",
+      "link_label": "Learn more",
+      "link_href": "#consultation"
+    }
+  ],
+  "features_section": {
+    "eyebrow": "Why Sterling & Hayes",
+    "title": "What changes when your lawyer and CPA share a hallway.",
+    "subtitle": "Six things our clients consistently say they didn't get from their previous providers."
+  },
+  "features": [
+    {
+      "icon": "shield",
+      "title": "Privileged & Confidential",
+      "summary": "Every engagement runs under attorney-client privilege — including the accounting work product."
+    },
+    {
+      "icon": "clock",
+      "title": "48-Hour Response SLA",
+      "summary": "Senior partner reply within two business days, in writing, on every active matter."
+    },
+    {
+      "icon": "wallet",
+      "title": "Flat & Capped Fees",
+      "summary": "We publish ceilings up front. No mystery invoices, no quarter-hour surprise."
+    },
+    {
+      "icon": "users",
+      "title": "Senior Eyes Only",
+      "summary": "Your matter is staffed by attorneys and CPAs with 12+ years experience — never first-year associates."
+    },
+    {
+      "icon": "globe",
+      "title": "Multi-State Coverage",
+      "summary": "Active bar admissions in Texas, Delaware, and New York; CPAs licensed in TX, CA, and FL."
+    },
+    {
+      "icon": "lock",
+      "title": "Encrypted Document Vault",
+      "summary": "SOC 2 Type II-audited client portal for document exchange, e-signature, and tax filings."
+    }
+  ],
+  "team_section": {
+    "eyebrow": "Senior Bench",
+    "title": "Meet the partners who will actually do the work.",
+    "subtitle": "No bait-and-switch staffing. The names you see here are the names on your engagement letter."
+  },
+  "team": [
+    {
+      "name": "Margaret Sterling, Esq.",
+      "role": "Managing Partner · Corporate & Tax",
+      "credentials": "JD, LL.M. Taxation",
+      "bio": "Twenty-two years advising founders on entity selection, equity grants, and exits.",
+      "image_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
+      "image_alt": "Portrait of Margaret Sterling"
+    },
+    {
+      "name": "David Hayes, CPA",
+      "role": "Partner · Tax & Audit Defense",
+      "credentials": "CPA, MBA",
+      "bio": "Former IRS revenue agent now helping clients win audits before they start.",
+      "image_url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80",
+      "image_alt": "Portrait of David Hayes"
+    },
+    {
+      "name": "Priya Nair, Esq.",
+      "role": "Partner · Contracts & Commercial",
+      "credentials": "JD, MBA",
+      "bio": "Closes 60+ commercial agreements per year for SaaS, healthcare, and energy clients.",
+      "image_url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80",
+      "image_alt": "Portrait of Priya Nair"
+    }
+  ],
+  "testimonials_section": {
+    "eyebrow": "Client Voices",
+    "title": "What founders and CFOs say after working with us.",
+    "subtitle": "Verified Google and Clio reviews from active clients across Texas, Delaware, and New York."
+  },
+  "testimonials": [
+    {
+      "name": "Andrea Washington",
+      "role": "CEO, Lumen Health Systems",
+      "rating": "5",
+      "quote": "Sterling & Hayes restructured our operating agreement and tax election in three weeks — saving us roughly $310k in projected federal liability.",
+      "image_url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
+      "image_alt": "Andrea Washington headshot"
+    },
+    {
+      "name": "Marcus Chen",
+      "role": "Founder, Halberd Capital",
+      "rating": "5",
+      "quote": "Most firms hand you to a junior. Margaret personally negotiated our LP agreements through three closings. Worth every basis point.",
+      "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+      "image_alt": "Marcus Chen headshot"
+    },
+    {
+      "name": "Lauren Park",
+      "role": "CFO, Vertex Industrial Group",
+      "rating": "5",
+      "quote": "David rebuilt our multi-state sales tax posture before our Series B audit. We passed with zero adjustments — a first for us.",
+      "image_url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",
+      "image_alt": "Lauren Park headshot"
+    }
+  ],
+  "faq_section": {
+    "eyebrow": "Common Questions",
+    "title": "Frequently asked before the first consultation.",
+    "subtitle": "If your question isn't here, ask it on the consultation form — we read every submission within one business day."
+  },
+  "faq": [
+    {
+      "question": "Do you handle both legal and accounting work for the same client?",
+      "answer": "Yes. The whole point of Sterling & Hayes is integrated counsel under attorney-client privilege. One engagement letter, one bill, one team."
+    },
+    {
+      "question": "What does a typical engagement cost?",
+      "answer": "Most matters are flat-fee or capped. Formations start at $2,500. Annual tax compliance for operating companies typically runs $4,800 – $14,000."
+    },
+    {
+      "question": "Are you licensed outside of Texas?",
+      "answer": "Yes. Our attorneys are admitted in Texas, Delaware, and New York. Our CPAs are licensed in Texas, California, and Florida, plus pro hac vice arrangements as needed."
+    },
+    {
+      "question": "How quickly can we get started?",
+      "answer": "After a 30-minute consultation we typically deliver an engagement letter within 48 hours and begin work the same week."
+    }
+  ],
+  "cta_section": {
+    "eyebrow": "Free 30-Minute Consultation",
+    "title": "Talk to a partner — not a paralegal — about your matter.",
+    "subtitle": "Tell us what you're working on. If we're not the right fit we'll tell you on the call and refer you to someone who is.",
+    "form_name_label": "Full name",
+    "form_name_placeholder": "Jane Doe",
+    "form_email_label": "Work email",
+    "form_email_placeholder": "jane@company.com",
+    "form_phone_label": "Phone",
+    "form_phone_placeholder": "(512) 555-0123",
+    "form_topic_label": "What do you need help with?",
+    "form_topic_placeholder": "Briefly describe your matter…",
+    "form_consent_label": "I understand this submission does not create an attorney-client relationship until an engagement letter is signed.",
+    "form_submit_label": "Request Consultation",
+    "trust_one": "Privileged & confidential",
+    "trust_two": "Reply within 24 hours",
+    "trust_three": "No obligation"
+  },
+  "footer": {
+    "tagline": "Trusted legal and accounting counsel for operators, founders, and families across Texas, Delaware, and New York.",
+    "newsletter_label": "Quarterly tax & legal briefing",
+    "newsletter_placeholder": "you@company.com",
+    "newsletter_button": "Subscribe",
+    "rights": "All rights reserved.",
+    "disclaimer": "Sterling & Hayes is a fictional sample firm used for template demonstration. Not legal or tax advice.",
+    "license": "Texas State Bar #00000000 · AICPA #00000000",
+    "links_legal_label": "Legal",
+    "links_resources_label": "Resources",
+    "links_company_label": "Company",
+    "social_linkedin_label": "LinkedIn",
+    "social_x_label": "X / Twitter",
+    "social_youtube_label": "YouTube"
+  },
+  "wysiwyg": {
+    "password": "tsw-lawyer-acct-2026",
+    "site_id": "lawyer-accountant-master",
+    "worker_url": "https://tsw-lawyer-accountant.workers.dev",
+    "allowed_pages": ["index.html"]
+  },
+  "items": [
+    {
+      "label": "Formation Bundle",
+      "title": "LLC + Operating Agreement + EIN",
+      "summary": "Texas or Delaware entity, customized operating agreement, federal EIN, and S-corp election if elected.",
+      "price": "$2,500",
+      "duration": "10 business days",
+      "image_url": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80",
+      "image_alt": "Notebook with company formation paperwork",
+      "cta_label": "Start Formation",
+      "cta_href": "#consultation"
+    },
+    {
+      "label": "Annual Compliance",
+      "title": "Books, Returns & Annual Filings",
+      "summary": "Monthly bookkeeping, quarterly reviews, federal + state returns, and annual report filings — flat monthly fee.",
+      "price": "from $480 / month",
+      "duration": "ongoing",
+      "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
+      "image_alt": "Accountant reviewing financial reports",
+      "cta_label": "See Pricing",
+      "cta_href": "#consultation"
+    },
+    {
+      "label": "Audit Defense Retainer",
+      "title": "IRS & State Audit Representation",
+      "summary": "Pre-paid defense retainer covering correspondence audits, field examinations, and offers in compromise.",
+      "price": "$3,950",
+      "duration": "12-month term",
+      "image_url": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80",
+      "image_alt": "Legal documents on a desk",
+      "cta_label": "Activate Retainer",
+      "cta_href": "#consultation"
+    },
+    {
+      "label": "Estate Plan",
+      "title": "Wills, Trusts & Powers of Attorney",
+      "summary": "Customized estate plan with revocable trust, pour-over will, healthcare and financial powers of attorney.",
+      "price": "$3,200",
+      "duration": "3 weeks",
+      "image_url": "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?auto=format&fit=crop&w=900&q=80",
+      "image_alt": "Estate planning documents",
+      "cta_label": "Plan My Estate",
+      "cta_href": "#consultation"
+    }
+  ]
+}
