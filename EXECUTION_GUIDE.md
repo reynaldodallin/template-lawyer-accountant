@@ -116,11 +116,17 @@ After the worker is deployed, the `assets/js/techsites-wysiwyg.config.js` (and `
 
 ## 7. Deploy hook URL
 
-After the Cloudflare Pages project is created, paste the deploy hook URL here and consume it from the n8n workflow node `[Lawyer-Accountant] Redeploy on config change`:
+Consumed by the n8n workflow node `[Lawyer-Accountant] Redeploy on config change`:
 
 ```
-https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/<HOOK_ID>
+https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/447c6c46-013f-4e9d-925e-5fad572bacba
 ```
+
+KV namespace ID: `8d29fc830c52419cbf706fee8376fb2f`
+
+Worker URL: `https://tsw-lawyer-accountant.reynaldodallin.workers.dev`
+
+Pages URL: `https://template-lawyer-accountant.pages.dev`
 
 ---
 

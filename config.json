@@ -280,7 +280,7 @@
   "wysiwyg": {
     "password": "tsw-lawyer-acct-2026",
     "site_id": "lawyer-accountant-master",
-    "worker_url": "https://tsw-lawyer-accountant.workers.dev",
+    "worker_url": "https://tsw-lawyer-accountant.reynaldodallin.workers.dev",
     "allowed_pages": ["index.html"]
   },
   "items": [

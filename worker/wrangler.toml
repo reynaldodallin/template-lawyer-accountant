@@ -1,0 +1,10 @@
+name = "tsw-lawyer-accountant"
+main = "worker.js"
+compatibility_date = "2026-05-02"
+account_id = "26b19ee17142012acbf267bed32581c0"
+
+workers_dev = true
+
+[[kv_namespaces]]
+binding = "TSW_KV"
+id = "8d29fc830c52419cbf706fee8376fb2f"
